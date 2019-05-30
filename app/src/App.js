@@ -6,7 +6,7 @@ class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-
+      todo: [],
     }
   }
   componentDidMount() {
@@ -21,6 +21,19 @@ class App extends React.Component {
           <img src={logo} className="App-logo" alt="logo" />
           <p>
             Edit <code>src/App.js</code> and save to reload.
+          </p>
+          <button onClick = {()=> {this.setState({todo: 'gurka'})}}>
+            <p>
+              lägg till gurka
+            </p>
+          </button>
+          <button onClick = {()=> {this.setState({todo: 'korv'})}}>
+            <p>
+              lägg till korv
+            </p>
+          </button>
+          <p>
+            {this.state.todo}
           </p>
           <a
             className="App-link"
