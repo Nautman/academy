@@ -6,13 +6,20 @@ class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      todo: [],
+      todos: [],
     }
   }
   componentDidMount() {
   }
   componentWillMount() {
 
+  }
+  addTodo(todo) {
+    let todos = this.state.todos
+    todos.push(todo)
+    this.setState({
+      todos: todos
+    })
   }
   render() {
     return (
@@ -22,12 +29,12 @@ class App extends React.Component {
           <p>
             Edit <code>src/App.js</code> and save to reload.
           </p>
-          <button onClick = {()=> {this.setState({todo: 'gurka'})}}>
+          <button onClick = {()=> {this.addTodo("gurka")}}>
             <p>
               lägg till gurka
             </p>
           </button>
-          <button onClick = {()=> {this.setState({todo: 'korv'})}}>
+          <button onClick = {()=> {this.addTodo("korv")}}>
             <p>
               lägg till korv
             </p>
@@ -35,6 +42,13 @@ class App extends React.Component {
           <p>
             {this.state.todo}
           </p>
+          <ul>
+            {
+              this.state.todos.map(todo => {
+                return <li>{todo}</li>
+              })
+            }
+          </ul>
           <a
             className="App-link"
             href="https://reactjs.org"
