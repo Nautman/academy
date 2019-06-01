@@ -1,0 +1,19 @@
+.Main{
+	height: 100px;
+	width: 100%;
+	background-color: lightblue;
+	padding-top: 50px;
+
+}
+
+input{
+	height: 32px;
+	padding-left: 10px;
+	border-radius: 10px;
+	margin-right: 6px;
+}
+
+button{
+	margin: auto;
+	border-radius: 10px;
+}
