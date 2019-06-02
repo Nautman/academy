@@ -1,15 +1,18 @@
 .firstPageDivider{
-  min-height: 500px;
+  min-height: 600px;
   margin: auto;
-  padding-top: 150px;
+  padding-top: 130px;
   padding-left: 130px;
 }
 
-.footerContainer{
-  text-align: left;
+.callToActionButton{
+  font-size: 20px;
+  height:50px;
+  padding: 0 24px 0 24px;
 }
 
 .floatingCode {  
+    opacity: 0.5;
     position: absolute;
     background-image: url("./assets/png/codeIcons_DU.png");
     background-repeat:no-repeat;
@@ -20,7 +23,7 @@
     bottom:0;
     right: 100;
     animation-name: floating;
-    animation-duration: 8s;
+    animation-duration: 6s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
 }
@@ -32,17 +35,19 @@
 }
 
 .floatingBinary {  
+    opacity: 0.4;
     position: absolute;
     background-image: url("./assets/png/binaryIcons-DU.png");
     background-repeat:no-repeat;
     background-size: 100% 100%;
     width:300px;
     height:150px;
-    float:center;
+    margin-right: 250px;
+    float:left;
     bottom:0;
     right:0;
     animation-name: floating;
-    animation-duration: 10s;
+    animation-duration: 8s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Layout, Menu, Col, Row, Button, Icon } from 'antd';
 import './App.css';
+import DUFooter from './components/DUFooter.js'
 
 const { Header, Content, Footer } = Layout;
 
@@ -8,102 +9,55 @@ function App() {
   return (
     <div className="App">
       <Layout className="layout">
-        <Header style={{backgroundColor: 'white'}}>
-          <div style={{position: 'absolute'}}>
-            <h1 style={{ color: '#1890ff', fontSize: 36, marginLeft: 20}}>
+        <Header style={{backgroundColor: 'white', height:83, borderBottom: '1px solid lightgrey', float:'right'}}>
+          <div style={{position: 'absolute', height:82, backgroundColor:'#1890ff', padding: '0 24px 0 18px'}}>
+            <h1 style={{fontSize: 30}}>
               >_
             </h1>
           </div>
           <Menu
             mode="horizontal"
             defaultSelectedKeys={['1']}
-            style={{ paddingLeft: 150, lineHeight: '70px'}}
+            style={{ padding: '0 150px 0 150px', lineHeight: '80px', float:'right', marginRight: 130}}
           >
             <Menu.Item key="1">Startsida</Menu.Item>
             <Menu.Item key="2">Om oss</Menu.Item>
             <Menu.Item key="3">Verksamhet</Menu.Item>
           </Menu>
+          <div style={{position: 'absolute', height:82, paddingTop: 8, right:0, marginRight: 50}}>
+            <Button size='large' type="primary" style={{marginLeft: 20, marginRight: 20}}>Bli medlem</Button>
+            <Button size='large' type="ghost">Logga in</Button>
+          </div>
+
         </Header>
 
         <Content style={{padding: '0 50px', backgroundColor: 'white'}}>
-          <Row gutter={8}>
-            <Col span={16}>
+          <Row gutter={32}>
+            <Col span={12}>
               <div className='firstPageDivider'>
-                <h1 style = {{fontSize: 60, color: '#1890ff', marginBottom: 10}}>
-                  Digital Ungdom
-                </h1>
-                <p style={{fontSize: 26}}>
+                <h1 style = {{fontSize: 40, color: 'black', marginBottom: 10, fontWeight: 'bold', lineHeight: '120%'}}>
                   Gillar du att programmera eller vill du lära dig?
+                </h1>
+                <p style={{fontSize: 20, marginBottom: 50}}>
+                  Med vår plattform kan du få hjälp och hjälpa andra att bli experter på programmering. Eller något sånt najs haha
                 </p>
                 <Row>
-                  <div >
-                    <Button size='large' type="primary" style={{marginLeft: 20,marginRight: 30}}>Tryck här!</Button>
-                    <Button size='large' type="ghost">Logga in</Button>
+                  <div>
+                    <Button className="callToActionButton" size='large' type="primary" style={{marginRight: 30}}>Kom igång direkt!</Button>
+                    <Button className="callToActionButton" size='large' type="ghost">Läs mer om oss</Button>
                   </div>
                 </Row>
               </div>
             </Col>
-            <Col span={6}>
-              <div style={{marginTop:350}}>
+            <Col span={6} style={{float:'right', marginRight: 100}}>
+              <div style={{marginTop:400}}>
                 <div className='floatingCode'/>
                 <div className='floatingBinary'/>
               </div>
             </Col>
           </Row>
         </Content>
-
-        <Footer style={{ textAlign: 'center', backgroundColor: 'rgba(0,0,0,0.95)', color: 'white', paddingTop: 50 }}>
-          
-          <Row type="flex" justify="space-around" gutter={16} style ={{marginBottom: 30}}>
-            <Col span={6}>
-              <div className="footerContainer">
-                <h4>
-                  Om oss
-                </h4>
-                <p>
-                  Digital Ungdom är ett ideellt ungdomsförbund med syfte att i Sverige utveckla och underhålla ungdomars intresse för och kunskaper om digital teknik och datavetenskap samt hur detta kan användas.
-                </p>
-              </div>
-            </Col>
-
-            <Col span={5}>
-              <div className="footerContainer">
-                <h4>
-                  Kontakt
-                </h4>
-                <p>
-                  E-post: <a>styrelse@digitalungdom.se</a>
-                </p>
-                <p>
-                  Telefonnummer: +46709447003
-                </p>
-              </div>
-            </Col>
-
-            <Col span={5}>
-              <div className="footerContainer">
-                <h4>
-                  Community
-                </h4>
-                <p>
-                  Discord-server: <a>https://discord.gg/J4JhCWH</a>
-                </p>
-                <p>
-                 <Icon type="facebook" /> <a>Facebook</a> 
-                </p>
-                <p>
-                  <Icon type="instagram" /> <a>Instagram</a> 
-                </p>                
-              </div>
-            </Col>
-
-          </Row>
-          <Row style={{borderTop: '1px solid grey', paddingTop: 20}}>
-            <p>
-             Bigital Bungdom ©2019
-            </p>
-          </Row>
-        </Footer>
+        <DUFooter/>
       </Layout>
     </div>
   );
