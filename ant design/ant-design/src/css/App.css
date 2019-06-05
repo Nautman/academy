@@ -14,7 +14,7 @@
 .floatingCode {  
     opacity: 0.5;
     position: absolute;
-    background-image: url("./assets/png/codeIcons_DU.png");
+    background-image: url("../assets/png/codeIcons_DU.png");
     background-repeat:no-repeat;
     background-size: 100% 100%;
     width:400px;
@@ -37,7 +37,7 @@
 .floatingBinary {  
     opacity: 0.4;
     position: absolute;
-    background-image: url("./assets/png/binaryIcons-DU.png");
+    background-image: url("../assets/png/binaryIcons-DU.png");
     background-repeat:no-repeat;
     background-size: 100% 100%;
     width:300px;
@@ -57,3 +57,33 @@
     65%  { transform: translate(0, 8px); }
     to   { transform: translate(0, -0px); }    
 }
+
+.happyChildren{
+    position: absolute;
+    background-image: url("../assets/png/gladaBarn-DU.png");
+    background-repeat:no-repeat;
+    background-size: 100% 100%;
+    top: 140px;
+    right: -130px;
+    width:700px;
+    height:500px;
+}
+
+.polygon
+{
+  height: 100px;
+  background: #1890ff;
+  clip-path: polygon(0 30%, 100% 0,100% 50%,0 50%);
+  margin-top:-70px;
+  padding-top: 10px;
+}
+.content
+{
+  margin-top:-50px;
+  padding: 0 120px 0 120px;
+  padding-top: 100px;
+  background: #1890ff;
+  min-height: 500px;
+}
+
+
