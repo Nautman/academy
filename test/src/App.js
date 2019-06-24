@@ -25,16 +25,6 @@ class App extends React.Component{
   render(){
     return (
         <Router>
-          /* Switch för content */
-          <Switch>
-            <Route path="/agora" component={Agora} />
-            <Route path="/academy" component={User} />
-            <Route path="/projects" component={User} />
-          </Switch>
-          /* Om det inte är infinite scrolling, rendera footer */
-          /* digitalungdom.se/academy, digitalungdom.se/projects */
-          /* INTE /agora */
-          <Route path="/(academy|projects)" component={Footer} />
           <div className="App">
             <Layout className="layout">
               <DUHeader/>
