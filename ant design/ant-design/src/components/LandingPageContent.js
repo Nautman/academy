@@ -11,11 +11,11 @@ class LandingPageContent extends React.Component{
         <Row gutter={32} >
           <Col span={12}>
             <div className='firstPageDivider'>
-              <h1 style = {{fontSize: 40, color: 'black', marginBottom: 10, fontWeight: 'bold', lineHeight: '120%'}}>
+              <h1 style = {{fontSize: 36, color: '#1c1c1c', marginBottom: 10, fontWeight: 'bold', lineHeight: '120%'}}>
                 Gillar du att programmera eller vill du lära dig?
               </h1>
-              <p style={{fontSize: 20, marginBottom: 50}}>
-                Med vår plattform kan du få hjälp och hjälpa andra att bli experter på programmering. Eller något sånt najs haha
+              <p style={{fontSize: 20, color: '#212121', marginBottom: 50}}>
+                Man lär sig bäst av att lära andra - Joina vår community och bli expert på programmering.
               </p>
               <Row>
                 <div>
