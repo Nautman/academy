@@ -3,7 +3,9 @@ import { useSelector, useDispatch } from 'react-redux'
 import { addTodo, completeTodo } from '../actions'
 
 function TodoList(){
-  const todoReducer = useSelector(state => state.todoReducer)
+  const todos = useSelector(state => {
+    return state.todoReducer.todos
+  })
   const dispatch = useDispatch()
 
   const textInput = React.createRef()
@@ -13,7 +15,7 @@ function TodoList(){
       <h3> List of things todo:</h3>
       <ul>
         {
-          todoReducer.todos.map((todo, index) => (
+          todos.map((todo, index) => (
             <li
               key = {"todolist" + index}
               onClick = {()=> dispatch(completeTodo(index))}
@@ -32,9 +34,9 @@ function TodoList(){
         ref={textInput}
       />
       <button onClick = {()=> {
-        const text = textInput.value
+        const text = textInput.current.value
         // const text = prompt("What todo would you like to add?")
-        console.log(text)
+        console.log(textInput)
         dispatch(addTodo(text))}
       }> Add todo </button>
     </div>
