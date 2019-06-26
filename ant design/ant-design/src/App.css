@@ -1,0 +1,84 @@
+.firstPageDivider{
+  min-height: 600px;
+  margin: auto;
+  padding-top: 130px;
+  padding-left: 130px;
+}
+
+.callToActionButton{
+  font-size: 20px;
+  height:50px;
+  padding: 0 24px 0 24px;
+}
+
+.floatingCode {  
+    opacity: 0.5;
+    position: absolute;
+    background-image: url("./assets/png/codeIcons_DU.png");
+    background-repeat:no-repeat;
+    background-size: 100% 100%;
+    width:400px;
+    height:300px;
+    float:center;
+    bottom:0;
+    right: 100;
+    animation-name: floating;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+    from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, 8px); }
+    to   { transform: translate(0, -0px); }    
+}
+
+.floatingBinary {  
+    opacity: 0.4;
+    position: absolute;
+    background-image: url("./assets/png/binaryIcons-DU.png");
+    background-repeat:no-repeat;
+    background-size: 100% 100%;
+    width:300px;
+    height:150px;
+    margin-right: 250px;
+    float:left;
+    bottom:0;
+    right:0;
+    animation-name: floating;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+    from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, 8px); }
+    to   { transform: translate(0, -0px); }    
+}
+
+.happyChildren{
+    position: absolute;
+    background-image: url("./assets/png/gladaBarn-DU.png");
+    background-repeat:no-repeat;
+    background-size: 100% 100%;
+    top: 140px;
+    right: -130px;
+    width:700px;
+    height:500px;
+}
+
+.polygon
+{
+  height: 900px;
+  background: #1890ff;
+  clip-path: polygon(0 10%, 100% 0,100% 50%,0 50%);
+  margin-top:-93px;
+}
+.content
+{
+
+}
+
+
